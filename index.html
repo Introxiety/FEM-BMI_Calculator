@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
   <title>Frontend Mentor | Body Mass Index Calculator</title>
 </head>
 
 <body>
-
+  <div class="background-container"></div>
   <header>
     <nav>
       <img src="starter-code/assets/images/logo.svg" alt="">
     </nav>
   </header>
+
   <main>
     <section>
       <h1>Body Mass Index Calculator</h1>
@@ -29,7 +29,7 @@
     <!-- METRIC & IMPERIAL CALCULATOR -->
     <section>
       <h2>Enter your details below</h2>
-      <div>
+      <div class="radio-container">
         <label>
           <input type="radio" name="unit" value="metric" checked> Metric
         </label>
@@ -40,22 +40,22 @@
       <div>
         <label for="height">Height</label>
         <div>
-          <input type="number" id="feet" placeholder="ft">
-          <input type="number" id="inches" placeholder="in">
+          <input type="number" id="feet" placeholder="cm">
+          <input type="hidden" id="inches" placeholder="in">
         </div>
       </div>
       <div>
         <label for="weight">Weight</label>
         <div>
-          <input type="number" id="stones" placeholder="st">
-          <input type="number" id="pounds" placeholder="lbs">
+          <input type="number" id="stones" placeholder="kg">
+          <input type="hidden" id="pounds" placeholder="lbs">
         </div>
       </div>
-    </section>
-    <section>
-      <h2>Your BMI is ...</h2>
-      <p class="bmi-value">22.0</p>
-      <p>Your BMI suggests you're a healthy weight. Your ideal weight is between 9st 6lbs - 12st 10lbs.</p>
+      <article>
+        <h2>Your BMI is ...</h2>
+        <p class="bmi-value">22.0</p>
+        <p>Your BMI suggests you're a healthy weight. Your ideal weight is between 9st 6lbs - 12st 10lbs.</p>
+      </article>
     </section>
 
     <article>

@@ -56,6 +56,11 @@ select {
     font: inherit;
 }
 
+@font-face {
+    font-family: 'Inter-font';
+    src: url(starter-code/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
@@ -74,4 +79,105 @@ select {
 
 :root {
     font-size: 62.5%;
+    --blue: hsl(227, 92%, 58%);
+    --gunmetal: hsl(215, 31%, 21%);
+    --Dark-Electric: hsl(215, 17%, 45%);
+    --white: #FFFFFF;
+}
+
+body {
+    display: grid;
+    padding: 3.2rem 2.4rem;
+    font-family: Inter-font;
+    position: relative;
+}
+
+/* HEADER */
+.background-container {
+    background-image: linear-gradient(to bottom, var(--white), #D6E6FE);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 64rem;
+    overflow: hidden;
+    z-index: -1;
+    border-radius: 3rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2.4rem;
+}
+
+nav img {
+    width: 4rem;
+}
+
+/* Main */
+
+main section:nth-of-type(1) {
+    text-align: center;
+    margin-bottom: 4.8rem;
+}
+
+main section:nth-of-type(1) h1 {
+    font-size: 4.8rem;
+
+    line-height: 100%;
+    margin-bottom: 2.4rem;
+    font-weight: 600;
+}
+
+main section:nth-of-type(1) p {
+    font-size: 1.6rem;
+    color: var(--Dark-Electric);
+}
+
+main section:nth-of-type(2) {
+    background-color: #FFFFFF;
+    border-radius: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 4fr);
+    padding: 2.4rem;
+    width: 32.8rem;
+    row-gap: 2.4rem;
+}
+
+main section:nth-of-type(2) h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+}
+
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+.radio-container label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.radio-container label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.radio-container label input[type="radio"]:checked+label::before {
+    background-color: #000;
+    border-color: #000;
 }
