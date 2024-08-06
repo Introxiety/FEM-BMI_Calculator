@@ -153,31 +153,66 @@ main section:nth-of-type(2) h2 {
 .radio-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.radio-container input[type="radio"] {
-    display: none;
-}
-
-.radio-container label {
+.radio-container div {
     display: flex;
     align-items: center;
-    cursor: pointer;
-    margin-right: 2rem;
 }
 
-.radio-container label::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #000;
+label {
+    margin-left: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 3.1rem;
+    height: 3.1rem;
+    border: 1px solid black;
     border-radius: 50%;
-    margin-right: 10px;
-    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    position: relative;
 }
 
-.radio-container label input[type="radio"]:checked+label::before {
-    background-color: #000;
-    border-color: #000;
+input[type="radio"]:checked::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: hsl(211, 100%, 50%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type="radio"]:checked {
+    border: 10px solid rgb(0, 123, 255, 0.2);
+}
+
+main section:nth-of-type(2) div:nth-of-type(2) {}
+
+main section:nth-of-type(2) div:nth-of-type(2) label,
+div:nth-of-type(3) label {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+main section:nth-of-type(2) div:nth-of-type(2) div input,
+div:nth-of-type(3) div input {
+    width: 100%;
+    height: 6.9rem;
+    border-radius: 1rem;
+    font-size: 2.4rem;
+    padding: 2rem 2.4rem;
+}
+
+main section:nth-of-type(2) div:nth-of-type(2) div input,
+div:nth-of-type(3) div input[type='placeholder'] {
+    text-align: right;
 }
