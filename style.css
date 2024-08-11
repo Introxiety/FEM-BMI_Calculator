@@ -361,7 +361,7 @@ span {
         grid-template-rows: auto;
         grid-template-areas:
             'header .'
-            'radio-metric radio-imperial'
+            'radio-container radio-container'
             'input-height input-weight'
             'bmi bmi';
     }
@@ -370,11 +370,20 @@ span {
         grid-area: header;
     }
 
-    .bmi-input .radio-container div:nth-of-type(1) {
-        grid-area: radio-metric;
+    .radio-container {
+        grid-area: radio-container;
     }
 
-    .bmi-input .radio-container div:nth-of-type(2) {
-        grid-area: radio-imperial;
+    .height-container {
+        grid-area: input-height;
+        min-width: 100%;
+    }
+
+    .weight-container {
+        grid-area: input-weight;
+    }
+
+    .bmi-value {
+        grid-area: bmi;
     }
 }
