@@ -87,12 +87,19 @@ select {
 
 body {
     display: grid;
-
     font-family: Inter-font;
     position: relative;
+    justify-content: center;
 }
 
 /* HEADER */
+.bmi-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .background-container {
     background-image: linear-gradient(to bottom, var(--white), #D6E6FE);
     background-repeat: no-repeat;
@@ -122,6 +129,7 @@ main section:nth-of-type(1) {
     text-align: center;
     margin-bottom: 4.8rem;
     padding: 3.2rem 2.4rem;
+
 }
 
 .bmi-input {
@@ -130,7 +138,7 @@ main section:nth-of-type(1) {
 
 main section:nth-of-type(1) h1 {
     font-size: 4.8rem;
-
+    max-width: 43.6rem;
     line-height: 100%;
     margin-bottom: 2.4rem;
     font-weight: 600;
@@ -343,4 +351,30 @@ main section:nth-of-type(1) article p:nth-of-type(1) {
 
 span {
     font-weight: 600;
+}
+
+@media (min-width: 48rem) {
+    .bmi-input {
+        min-width: 68.6rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'header .'
+            'radio-metric radio-imperial'
+            'input-height input-weight'
+            'bmi bmi';
+    }
+
+    .bmi-input h2 {
+        grid-area: header;
+    }
+
+    .bmi-input .radio-container div:nth-of-type(1) {
+        grid-area: radio-metric;
+    }
+
+    .bmi-input .radio-container div:nth-of-type(2) {
+        grid-area: radio-imperial;
+    }
 }
