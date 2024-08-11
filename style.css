@@ -208,12 +208,7 @@ div:nth-of-type(3) {
     font-weight: 600;
 }
 
-main section:nth-of-type(2) div:nth-of-type(2) label,
-div:nth-of-type(3) label {
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin: 0;
-}
+
 
 main section:nth-of-type(2) div:nth-of-type(2) div input,
 div:nth-of-type(3) div input {
