@@ -360,30 +360,42 @@ span {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            'header .'
-            'radio-container radio-container'
+            'header header'
+            'radio-metric radio-imperial'
             'input-height input-weight'
             'bmi bmi';
+        column-gap: 2.4rem;
+    }
+
+    .radio-metric {
+        grid-area: radio-metric;
+    }
+
+    .radio-imperial {
+        grid-area: radio-imperial;
     }
 
     .bmi-input h2 {
         grid-area: header;
     }
 
-    .radio-container {
-        grid-area: radio-container;
-    }
 
     .height-container {
         grid-area: input-height;
-        min-width: 100%;
+        min-width: 29.9rem, ;
     }
 
     .weight-container {
         grid-area: input-weight;
+        min-width: 29.9rem;
     }
 
     .bmi-value {
         grid-area: bmi;
+    }
+
+    .height-container input,
+    .weight-container input {
+        min-width: 29.9rem;
     }
 }
