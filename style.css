@@ -405,10 +405,33 @@ span {
 
     .bmi-value {
         grid-area: bmi;
+        border-top-right-radius: 15rem;
+        border-bottom-right-radius: 15rem;
+        display: grid;
+        grid-template-areas:
+            'header bmi-suggest'
+            'bmi-grade bmi-suggest';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .bmi-value h2 {
+        grid-area: header;
+        font-size: 1.6rem;
+    }
+
+    .bmi-value p:nth-of-type(1) {
+        grid-area: bmi-grade;
+    }
+
+    .bmi-value p:nth-of-type(2) {
+        grid-area: bmi-suggest;
+        align-self: center;
     }
 
     .height-container input,
     .weight-container input {
         min-width: 29.9rem;
+
     }
 }
