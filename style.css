@@ -432,6 +432,74 @@ span {
     .height-container input,
     .weight-container input {
         min-width: 29.9rem;
+    }
 
+    .bmi-result {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'img result'
+            'advice advice';
+    }
+
+    .bmi-result img {
+        grid-area: img;
+    }
+
+    .bmi-result>article:nth-of-type(1) {
+        grid-area: result;
+    }
+
+    .bmi-result>div {
+        grid-area: advice;
+    }
+
+    .bmi-result>div article {
+        grid-template-columns: .2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'logo header'
+            'logo text';
+        row-gap: 2.4rem;
+    }
+
+    .bmi-result>div article img {
+        grid-area: logo;
+        align-self: center;
+    }
+
+    .limit-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'gender gender age age'
+            'muscle muscle pregnancy pregnancy'
+            '. race race .';
+    }
+
+    .limit-container article:nth-of-type(1) {
+        grid-area: gender;
+    }
+
+    .limit-container article:nth-of-type(2) {
+        grid-area: age;
+    }
+
+    .limit-container article:nth-of-type(3) {
+        grid-area: muscle;
+    }
+
+    .limit-container article:nth-of-type(4) {
+        grid-area: pregnancy;
+    }
+
+    .limit-container article:nth-of-type(5) {
+        grid-area: race;
+    }
+
+    .limit-container article {
+        min-width: 33.5rem;
+        height: 23.2rem;
     }
 }
