@@ -503,3 +503,17 @@ span {
         height: 25.6rem;
     }
 }
+
+@media (min-width: 90rem) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'bmi-intro bmi-input'
+            'bmi-result bmi-result'
+            'bmi-limit bmi-limit';
+
+    }
+
+}
