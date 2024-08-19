@@ -516,4 +516,19 @@ span {
 
     }
 
+    .bmi-intro {
+        grid-area: bmi-intro;
+    }
+
+    .bmi-input {
+        grid-area: bmi-input;
+    }
+
+    .bmi-result {
+        grid-area: bmi-result;
+    }
+
+    .bmi-limitation {
+        grid-area: bmi-limit;
+    }
 }
