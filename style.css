@@ -505,6 +505,11 @@ span {
 }
 
 @media (min-width: 90rem) {
+
+    body {
+        padding: 7.5rem 14rem;
+    }
+
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -518,10 +523,13 @@ span {
 
     .bmi-intro {
         grid-area: bmi-intro;
+        justify-content: left;
+        padding: 0;
     }
 
     .bmi-input {
         grid-area: bmi-input;
+        min-width: 56.4rem;
     }
 
     .bmi-result {
@@ -530,5 +538,22 @@ span {
 
     .bmi-limitation {
         grid-area: bmi-limit;
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav img {
+        width: 5.875rem;
+    }
+
+    .background-container {
+        width: 75%;
+    }
+
+    main section:nth-of-type(1) h1 {
+        font-size: 6.4rem;
+        text-align: left;
     }
 }
