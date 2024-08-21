@@ -174,7 +174,6 @@ main section:nth-of-type(1) {
 
 main section:nth-of-type(1) h1 {
     font-size: 4.8rem;
-    max-width: 43.6rem;
     line-height: 100%;
     margin-bottom: 2.4rem;
     font-weight: 600;
@@ -523,13 +522,23 @@ span {
 
     .bmi-intro {
         grid-area: bmi-intro;
-        justify-content: left;
+        justify-content: flex-start;
         padding: 0;
+    }
+
+    .bmi-intro h1 {
+        min-width: 51.4rem;
+        margin-top: 12.7rem;
+    }
+
+
+
+    .bmi-intro p {
+        text-align: left;
     }
 
     .bmi-input {
         grid-area: bmi-input;
-        min-width: 56.4rem;
     }
 
     .bmi-result {
